@@ -28,7 +28,7 @@ In source folder (src) we have 3 subfolders:
 
 - Code1: Legacy code, coupled code, no single responsability, ... (Integration tests).
 
-- Code2: First refactor, dependency inhection, more readable (Integration + Unit tests). 
+- Code2: First refactor, dependency injection, more readable (Integration + Unit tests). 
 
 - Code3: Small refactor about Code2, more encapsulation and replace implementations by interfaces (Integration + Unit tests)   
     
