@@ -33,7 +33,6 @@ class UserFileSystemRepository
      */
     public function getUser(int $userId): ? User
     {
-        // Check if user exist
         $csvReader = Reader::createFromString(file_get_contents($this->basePath . '/users.csv'));
         $csvReader->setDelimiter(',');
 
