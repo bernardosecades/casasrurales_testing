@@ -7,6 +7,8 @@ use BernardoSecades\Testing\Code2\User;
 use BernardoSecades\Testing\Code2\UserFileSystemRepository;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\ObjectProphecy;
+use Faker\Factory as FakerFactory;
+use Faker\Generator;
 use Exception;
 
 /**
@@ -20,6 +22,9 @@ class AddContactsActionTest extends TestCase
     /** @var int */
     private $userId;
 
+    /** @var Generator */
+    private $faker;
+
     /** @var AddContactsUseCase */
     private $sut;
 
@@ -27,8 +32,10 @@ class AddContactsActionTest extends TestCase
     {
         parent::setUp();
 
-        $this->userId = 1;
+        $this->faker = FakerFactory::create();
+        $this->userId = $this->faker->randomNumber();
         $this->userFileSystemRepository = $this->prophesize(UserFileSystemRepository::class);
+
         $this->sut = new AddContactsUseCase($this->userFileSystemRepository->reveal());
     }
 
