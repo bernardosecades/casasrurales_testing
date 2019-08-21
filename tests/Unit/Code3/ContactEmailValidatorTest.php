@@ -6,6 +6,9 @@ use BernardoSecades\Testing\Code3\ContactEmailValidator;
 use PHPUnit\Framework\TestCase;
 use Exception;
 
+/**
+ * @group code3
+ */
 class ContactEmailValidatorTest extends TestCase
 {
     /** @var ContactEmailValidator */

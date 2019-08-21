@@ -6,6 +6,9 @@ use BernardoSecades\Testing\Code2\AddContactsUseCase;
 use BernardoSecades\Testing\Code2\UserFileSystemRepository;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @group code2
+ */
 class AddContactsActionTest extends TestCase
 {
     /** @var string */

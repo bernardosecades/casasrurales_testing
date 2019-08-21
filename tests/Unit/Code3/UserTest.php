@@ -8,6 +8,9 @@ use PHPUnit\Framework\TestCase;
 use Faker\Factory as FakerFactory;
 use Faker\Generator;
 
+/**
+ * @group code3
+ */
 class UserTest extends TestCase
 {
     /** @var Generator */

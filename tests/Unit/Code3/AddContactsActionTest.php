@@ -12,6 +12,9 @@ use Faker\Factory as FakerFactory;
 use Faker\Generator;
 use Exception;
 
+/**
+ * @group code3
+ */
 class AddContactsActionTest extends TestCase
 {
     /** @var ObjectProphecy|UserRepository */

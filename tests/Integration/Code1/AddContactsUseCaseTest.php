@@ -5,6 +5,9 @@ namespace Tests\Integration\Code1;
 use BernardoSecades\Testing\Code1\AddContactsUseCase;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @group code1
+ */
 class AddContactsUseCaseTest extends TestCase
 {
     /** @var string */

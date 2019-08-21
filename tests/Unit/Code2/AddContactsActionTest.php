@@ -5,11 +5,13 @@ namespace Tests\Unit\Code2;
 use BernardoSecades\Testing\Code2\AddContactsUseCase;
 use BernardoSecades\Testing\Code2\User;
 use BernardoSecades\Testing\Code2\UserFileSystemRepository;
-use BernardoSecades\Testing\Code2\UserType;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\ObjectProphecy;
 use Exception;
 
+/**
+ * @group code2
+ */
 class AddContactsActionTest extends TestCase
 {
     /** @var ObjectProphecy|UserFileSystemRepository */
