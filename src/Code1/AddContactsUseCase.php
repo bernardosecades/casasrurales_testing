@@ -51,9 +51,9 @@ class AddContactsUseCase
             throw new Exception(sprintf('User no premium can not add more than 10 contacts to the same time', $userId));
         }
 
-        // Althought user is premium we have a limit of 5 contacts even for premium users
+        // User is premium we have a limit of 5 contacts even for premium users
         if (count($contacts) > 5) {
-            throw new Exception(sprintf('User can not add more than 100 contacts to the same time'));
+            throw new Exception(sprintf('User can not add more than 5 contacts to the same time'));
         }
 
         // Validate $contacts have email in right format and right domain

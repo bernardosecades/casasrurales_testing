@@ -45,7 +45,6 @@ class User
      */
     public function getEmail(): string
     {
-
         return $this->email;
     }
 
