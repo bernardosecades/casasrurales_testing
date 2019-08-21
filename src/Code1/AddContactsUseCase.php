@@ -30,7 +30,7 @@ class AddContactsUseCase
     public function execute(array $contacts, int $userId): void
     {
         // Check if user exist
-        $csvReader = Reader::createFromString(file_get_contents($this->basePath . '/users.txt'));
+        $csvReader = Reader::createFromString(file_get_contents($this->basePath . '/users.csv'));
         $csvReader->setDelimiter(',');
 
         $user = null;
@@ -76,7 +76,7 @@ class AddContactsUseCase
         }
 
         // Save contacts
-        $saved = file_put_contents($this->basePath . '/user_' . $userId . '_contacts.txt' , $csvWriter->getContent());
+        $saved = file_put_contents($this->basePath . '/user_' . $userId . '_contacts.csv' , $csvWriter->getContent());
 
         if ($saved === false) {
             throw new Exception('Error to try save contacts');

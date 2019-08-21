@@ -28,7 +28,7 @@ class AddContactsActionTest extends TestCase
         parent::setUp();
         $this->userId = 1;
         $this->basePath = dirname(__DIR__, 1) . '/data';
-        $this->contactFile = $this->basePath . "/user_{$this->userId}_contacts.txt";
+        $this->contactFile = $this->basePath . "/user_{$this->userId}_contacts.csv";
         $userFileSystemRepository = new UserFileSystemRepository(dirname(__DIR__, 1) . '/data');
 
         $this->sut = new AddContactsUseCase($userFileSystemRepository);
