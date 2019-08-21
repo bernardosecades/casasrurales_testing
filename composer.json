@@ -1,0 +1,29 @@
+{
+    "name": "bernardosecades/casasrurales_testing",
+    "description": "Testing",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^7.5",
+        "league/csv": "^9.3",
+        "doctrine/collections": "^1.6",
+        "myclabs/php-enum": "^1.7",
+        "fzaninotto/faker": "^1.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bernardosecades",
+            "email": "bernardosecades@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BernardoSecades\\Testing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

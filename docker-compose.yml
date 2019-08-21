@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  testing-php:
+    build:
+      context: docker/local/testing-php
+    restart: unless-stopped
+    container_name: testing-php
+    ports:
+    - "2222:80"
+    volumes:
+    - "${PWD}/:/app"
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    - "./docker/local/testing-php/rootfs/etc/apache2/sites-available/000-default.conf:/etc/apache2/sites-available/000-default.conf"
+    - "./docker/local/testing-php/rootfs/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini"
+    tty: true
+    networks:
+      - casasrurales-network
+
+networks:
+  casasrurales-network:
